@@ -1,0 +1,165 @@
+/* ---------- Page setup ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(160deg, #6dd5ed, #2193b0);
+  padding: 40px 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Search bar ---------- */
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.city-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #2193b0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.search-btn:hover {
+  background: #eaf7fb;
+  transform: translateY(-2px);
+}
+
+/* ---------- Messages ---------- */
+.message {
+  font-size: 1rem;
+  margin: 16px 0;
+}
+
+.message.error {
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------- Weather card ---------- */
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 18px;
+  padding: 28px 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-4px);
+}
+
+.city {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.country {
+  font-size: 1rem;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+  margin: 8px auto;
+  display: block;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.condition {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* ---------- Detail boxes ---------- */
+.details {
+  display: flex;
+  gap: 12px;
+}
+
+.detail-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.value {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 400px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .temp {
+    font-size: 2.4rem;
+  }
+}

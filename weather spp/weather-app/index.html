@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1 class="title">Weather Forecast</h1>
+
+      <!-- Search form -->
+      <form id="search-form" class="search-form" autocomplete="off">
+        <input
+          type="text"
+          id="city-input"
+          class="city-input"
+          placeholder="Enter a city name..."
+          aria-label="City name"
+        />
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+
+      <!-- Loading message (hidden by default) -->
+      <p id="loading" class="message hidden">Loading weather data...</p>
+
+      <!-- Error message (hidden by default) -->
+      <p id="error" class="message error hidden"></p>
+
+      <!-- Weather card (hidden until data is loaded) -->
+      <section id="weather-card" class="weather-card hidden">
+        <h2 id="city-name" class="city"></h2>
+        <p id="country" class="country"></p>
+
+        <img id="weather-icon" class="icon" src="" alt="Weather icon" />
+
+        <p id="temperature" class="temp"></p>
+        <p id="condition" class="condition"></p>
+
+        <div class="details">
+          <div class="detail-box">
+            <span class="label">Humidity</span>
+            <span id="humidity" class="value"></span>
+          </div>
+          <div class="detail-box">
+            <span class="label">Wind Speed</span>
+            <span id="wind" class="value"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
